@@ -5,7 +5,6 @@ import javax.persistence.*;
 @Entity(name = "account")
 public class User {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
     @Basic

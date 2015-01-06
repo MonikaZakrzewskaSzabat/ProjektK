@@ -2,38 +2,59 @@ package com.springapp.mvc;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.ModelMap;
-import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.ModelAndView;
+
+import javax.servlet.http.HttpServletRequest;
+import java.io.IOException;
+import java.util.List;
 
 @Controller
 public class UserController {
     @Autowired
-    private UserRepository userRepository;
+    private UserDAO userDAO;
 
-    @RequestMapping(value = "/", method = RequestMethod.GET)
-    public String listUsers(ModelMap model) {
-        model.addAttribute("user", new User());
-        model.addAttribute("users", userRepository.findAll());
-        return "users";
+    @RequestMapping(value="/")
+    public ModelAndView listUsers(ModelAndView model) throws IOException {
+        List<User> listUsers = userDAO.list();
+        model.addObject("listUsers", listUsers);
+        model.setViewName("home");
+
+        return model;
     }
 
-    @RequestMapping(value = "/add", method = RequestMethod.POST)
-    public String addUser(@ModelAttribute("user") User user, BindingResult result) {
-
-        userRepository.save(user);
-
-        return "redirect:/";
+    @RequestMapping(value = "/newUser", method = RequestMethod.GET)
+    public ModelAndView newUser(ModelAndView model) {
+        User user = new User();
+        model.addObject("user", user);
+        model.setViewName("UserForm");
+        return model;
     }
 
-    @RequestMapping("/delete/{userId}")
-    public String deleteUser(@PathVariable("userId") Long userId) {
-
-        userRepository.delete(userRepository.findOne(userId));
-
-        return "redirect:/";
+    @RequestMapping(value = "/saveUser", method = RequestMethod.POST)
+    public ModelAndView saveUser(@ModelAttribute User user) {
+        userDAO.saveOrUpdate(user);
+        return new ModelAndView("redirect:/");
     }
+
+    @RequestMapping(value = "/deleteUser", method = RequestMethod.GET)
+    public ModelAndView deleteUser(HttpServletRequest request) {
+        Long id = Long.parseLong(request.getParameter("id"));
+        userDAO.delete(id);
+        return new ModelAndView("redirect:/");
+    }
+
+    @RequestMapping(value = "/editUser", method = RequestMethod.GET)
+    public ModelAndView editUser(HttpServletRequest request) {
+        Long id = Long.parseLong(request.getParameter("id"));
+        User user = userDAO.get(id);
+        ModelAndView model = new ModelAndView("UserForm");
+        model.addObject("user", user);
+
+        return model;
+    }
+
 }
+
