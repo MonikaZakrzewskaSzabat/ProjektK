@@ -22,7 +22,7 @@ public class UserDAOImpl implements UserDAO {
 
     @Override
     public void saveOrUpdate(User user) {
-        if (user.getId() > 0) {
+        if (user.getId() != null) {
             // update
             String sql = "UPDATE users SET firstname=?, lastname=?, email=? WHERE id=?";
             jdbcTemplate.update(sql, user.getFirstName(), user.getLastName(),
