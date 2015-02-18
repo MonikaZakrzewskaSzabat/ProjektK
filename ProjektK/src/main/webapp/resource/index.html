@@ -1,0 +1,81 @@
+<html>
+<head>
+	<title>Konfesjonał - logowanie</title>
+	<meta http-equiv="Content-Type" content="text/html:charset=utf-8"/>
+	<link rel="stylesheet" href="./style.css" type="text/css">
+	<link href="app.css" rel="stylesheet">
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
+	<style> .glyphicon-thumbs-up { cursor:pointer } </style>
+</head>
+
+<body ng-app="" background="./pics/tlo.jpg">
+   
+    <ul class="expandable navbar-nav navbar-right">
+		<br>
+		<div ng-app="" ng-controller="personController">
+		<button class="btn" ng-click="redirect1()">Logowanie</button>
+		<button class="btn" ng-click="redirect2()">Rejestracja</button>
+		</div>
+    </ul>
+	
+	<div class="row">
+		<div class="col-md-6 col-md-offset-3">
+				<div class="main-page-header">
+					<br>
+					<h1>U nas wyspowiadasz się bez strachu!</h1><br>
+				</div>
+		</div>
+	</div>		
+		<div class="expandable">
+			<br><br><br>
+			<div ng-app="" ng-controller="personController">
+			<div class="btn" align="center" ng-click="toggle1()">O inicjatywie</div><br><br>
+			<b><p align="center" ng-show="myVar1">
+			Tu będzie coś napisane o inicjatywie...<br><br>
+			</b></p>
+			<div class="btn" ng-click="toggle2()">Dlaczego warto?</div><br><br>
+			<b><p align="center" ng-show="myVar2">
+			Tutaj coś na temat dlaczego warto....<br><br>
+			</b></p>
+			<div class="btn" ng-click="toggle3()">Kontakt</div><br><br>
+			<b><p align="center" ng-show="myVar3">
+			A tu trzeba umieścić jakiś kontakt....
+			</b></p>
+		</div>
+			
+</div>		
+
+<script src="./angular-1.2.27/angular.js" ></script>
+<script src="./appProfil.js"></script>
+  
+<script>
+function personController($scope) {
+    $scope.myVar1 = false;
+	$scope.myVar2 = false;
+	$scope.myVar3 = false;
+    $scope.toggle1 = function() {
+        $scope.myVar1 = !$scope.myVar1;
+		$scope.myVar2 = false;
+		$scope.myVar3 = false;
+    };
+	$scope.toggle2 = function() {
+        $scope.myVar2 = !$scope.myVar2;
+		$scope.myVar1 = false;
+		$scope.myVar3 = false;
+    };
+	$scope.toggle3 = function() {
+        $scope.myVar3 = !$scope.myVar3;
+		$scope.myVar1 = false;
+		$scope.myVar2 = false;
+    };
+	$scope.redirect1 = function(){
+		window.location = "Logowanie.html";
+	};
+	$scope.redirect2 = function(){
+		window.location = "Rejestracja.html";
+	};
+}
+</script> 
+
+</body>
+</html>

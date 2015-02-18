@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html ng-app="store">
+	<head>
+		<title>Projekt konfesjonał</title>
+		<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8" />
+		<link href="./bootstrap-3.3.1-dist/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+		
+		<script type="text/javascript">
+		 function change(){  
+            document.getElementById("chUser").style.display = "none";  
+			document.getElementById("messPl").style.display = "block"; 
+        }  
+          
+        function change1(){  
+            document.getElementById("chUser").style.display = "block";  
+			document.getElementById("messPl").style.display = "none"; 
+			document.getElementById("startM").disabled = true;  
+        } 
+		
+		 function change2(){  
+            document.getElementById("startM").disabled = false;   
+
+        } 
+		
+		function mess1(){
+			alert('Użytkownik uzyskał rozgrzeszenie. Spowiedź zakończona.');
+		}
+	
+		function mess2(){
+			alert('Spowiedź została zarchiwizowana.');
+		}
+		</script>
+	</head>
+	
+	<body ng-controller="StoreController as store" background="./pics/tlo.jpg" >
+		<div class="container">
+			<br>
+				<ul class="expandable navbar-nav navbar-right">
+				<audio id="id1" src="./music/sounds.mp3"></audio>
+				<p align="left" ><b>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+				Music:</b></p>
+				<div ng-app="" ng-controller="personController">
+				<p style="text-align:right">
+				<button type="button" class="btn" onClick="document.getElementById('id1').play()"><span class="glyphicon glyphicon-play"></span>Play</button>
+				<button type="button" class="btn" onClick="document.getElementById('id1').pause()"><span class="glyphicon glyphicon-pause"></span>Pause</button>
+				<button class="btn" ng-click="redirect2()">Edytuj profil</button>
+				<button class="btn" ng-click="redirect1()">Wyloguj</button>
+				</p></div></ul>
+			
+			<h1 style="text-align:center">Konfesjonał</h1>
+			
+			<br><br><br>
+			<section ng-controller="PanelController as panel" >
+				<ul class="nav nav-tabs">
+					<li ng-class="{ active:panel.isSelected(1)}">
+					<a href class="label label-info" ng-click="panel.selectTab(1)">Profil</a></li>
+					<li ng-class="{ active:panel.isSelected(2)}">
+					<a href class="label label-info" ng-click="panel.selectTab(2)">Spowiedź</a></li>
+				</ul>
+				
+					<div class="panel" ng-show="panel.isSelected(1)">
+						<br>
+						<h4>Profil użytkownika:</h4><br>
+							<div class="row" >
+								<div class="col-md-3 col-md-offset-1">
+									<img ng-src="{{store.person.image}}"/>
+								</div>
+								<div class="col-md-8">
+									<p><b>Imię:</b>{{store.person.firstName}}</p>
+									<p><b>Nazwisko:</b>{{store.person.lastName}}</p>
+									<p><b>Wiek:</b>{{store.person.age}}</p>
+									<p><b>Parafia:</b>{{store.person.place}}</p>
+									<p><b>Miejscowość:</b>{{store.person.city}}</p>
+									<br><br>
+								</div>
+							</div>
+					</div>
+					<div class="panel" ng-show="panel.isSelected(2)">
+						<br>
+						<div ng-controller="StatusController as status">
+							<b>Status: </b>{{status.isSelected(status.value)}}
+							<div class="wybor">
+							<select ng-model="status.value" ng-click="status.selectStatus({{status.value}})">
+								<option value=" Aktywny">Aktywny</option>
+								<option value=" Niedostępny">Niedostępny</option>
+							</select></div>
+							<br>
+							<div class="status" ng-hide="status.isActive(' Aktywny')||status.isActive(' Niedostępny')">
+								<br><br><br>
+								<div class="alert alert-danger" role="alert"><h4 style="text-align:center"> Zmień status na aktywny! </h4></div>
+								<br><br><br><br><br>
+							</div>
+							<div class="status" ng-show="status.isActive(' Niedostępny')">
+								<br><br><br>
+								<div class="alert alert-danger" role="alert"><h4 style="text-align:center"> Zmień status na aktywny! </h4></div>
+								<br><br><br><br><br>
+							</div>
+							<div  ng-show="status.isActive(' Aktywny')" >
+								<div class="row" >
+									<div class="col-md-3 col-md-offset-1" ><br>
+										<h4>Lista oczekujących:</h4>
+											<a id="link-1" href ng-click="value = 'Oczekujący 1'" onClick="change2()">Oczekujący 1</a><br>
+											<a id="link-2" href ng-click="value = 'Oczekujący 2'" onClick="change2()">Oczekujący 2</a><br>
+											<a id="link-3" href ng-click="value = 'Oczekujący 3'" onClick="change2()">Oczekujący 3</a><br>										
+									</div>
+									<div class="col-md-7 col-md-offset-1"><br>
+										<h4>Okno rozmowy:</h4>
+										<form>
+											<div id="chUser">
+												Wybrany użytkownik: <input ng-model="value" required disabled/>
+												<button id="startM" type="button" class="btn btn-primary" ng-click="start = 'Spowiedź rozpoczęta'" onclick="change()" disabled>Rozpocznij spowiedź</button><br><br>
+											</div>
+											<div id="messPl" style="display:none">
+												<textarea data-min-length="" ng-model="start" tabindex="101" rows="8" cols="85" name="post-text" class="wmd-input processed" id="wmd-input" disabled></textarea><br>
+												<input size="75" /> <button type="button" class="btn btn-primary">Wyślij</button><br>
+												Udzielanie rozgrzeszenia: <button type="reset" class="btn btn-success" onclick="mess1(), change1()";>Rozgrzesz</button><br>
+												Archiwizowanie spowiedzi: <button type="reset" class="btn btn-primary" onclick="mess2(), change1()";>Archiwizacja</button><br>
+												Kończenie lub przerwanie (bez udzielenia rozgrzeszenia) spowiedzi: <button type="reset" class="btn btn-danger" onclick="change1()">Zakończ</button><br>
+											</div>
+										</form>
+									</div> 
+								</div>
+							</div>
+						</div>
+					</div>
+							
+			</section>
+			
+		</div>
+		
+			<script src="./angular-1.2.27/angular.js" ></script>
+			<script src="./appProfil.js"></script>
+			<script>
+				function personController($scope) {
+					$scope.redirect1 = function(){
+						window.location = "wyloguj.html";
+					};
+					$scope.redirect2 = function(){
+						window.location = "zmiana.html";
+					};
+				}
+			</script> 	
+	</body>
+</html>

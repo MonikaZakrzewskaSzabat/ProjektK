@@ -1,0 +1,49 @@
+<html>
+<head>
+  <title>Konfesjonał</title>
+  <meta http-equiv="Content-Type" content="text/html:charset=utf-8"/>
+<link rel="stylesheet" href="./style.css" type="text/css">
+  <link href="app.css" rel="stylesheet">
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
+  
+  <script type="text/javascript">
+  angular.module('notesApp', [])
+    .controller('MainCtrl', [function() {
+      this.username = 'nothing';
+    }]);
+</script>
+
+  <style> .glyphicon-thumbs-up { cursor:pointer } </style>
+</head>
+
+<body ng-app="" background="./pics/tlo.jpg", ng-controller="MainCtrl as ctrl">
+   
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="index.html">Powrót</a></li>
+    </ul>
+	
+	<div class="row">
+		<div class="col-md-6 col-md-offset-3">
+			  <div class="main-page-header">
+				<h1>Konfesjonał - rejestracja </h1><br>
+			 </div>
+		</div>
+
+		<div class="expandable" >
+			<div class="col-md-7 col-md-offset-4">
+			 <form ng-submit="ctrl.submit()"><table class="expandable">
+				<tr><td>Imię:</td><td> <input type="text" ng-model="ctrl.user.firstname" class="formbox"><br><br></td></tr>
+				<tr><td>Nazwisko:</td><td> <input type="text" ng-model="ctrl.user.lastname" class="formbox"><br><br></td></tr>
+				<tr><td>Email:</td><td><input type="text" ng-model="ctrl.user.email" class="formbox"><br><br></td></tr>
+				<tr><td>Login:</td><td> <input type="text" ng-model="ctrl.user.username" class="formbox"><br><br></td></tr>
+				<tr><td>Hasło:</td><td><input type="password" ng-model="ctrl.user.password" class="formbox" ><br><br></td></tr>
+				<tr><td>Powtórz:</td><td><input type="password" ng-model="ctrl.user.password2" class="formbox"><br><br></td></tr></table>
+				<input type="submit" value="Zarejestruj" class="btn">  <input type="reset" value="Wyczyść" class="btn"> 
+			</form>
+			</div>
+		</div>
+			
+</div>		
+
+</body>
+</html>

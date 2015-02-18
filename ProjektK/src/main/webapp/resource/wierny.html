@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html ng-app="wierny">
+  <head>
+	<link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="style_wierny.css" />
+	<script type="text/javascript" src="angular.min.js"></script>
+    <script type="text/javascript" src="app_wierny.js"></script>
+	<script type="text/javascript">
+	</script>
+  </head>
+  <body background="./pics/tlo.jpg"><font color="white">
+  <div class="container">
+		<h1><center><font color="white">Konfesjonal</font></center></h1>
+		<br><br><br><br>
+		<div>
+			<section ng-controller="PanelController as panel">
+					<ul class="nav nav-tabs">
+						<li ng-class="{active:panel.isSelected(1)}"> 
+							<a href ng-click="panel.selectTab(1)">Profil</a> 
+						</li>
+						<li ng-class="{active:panel.isSelected(2)}"> 
+							<a href ng-click="panel.selectTab(2)">Spowiedz</a> 
+						</li>
+						<li ng-class="{active:panel.isSelected(3)}"> 
+							<a href ng-click="panel.selectTab(3)">Ocena</a> 
+						</li>
+					</ul>
+					<div id="szare" class="panel" ng-show="panel.isSelected(1)">
+						<div ng-controller="UserController as prof">
+							<h2>Profil</h2><br><br>
+							<div class="row">
+							<div class="col-md-2">
+							<img ng-src="{{prof.user.image}}" width="150" height="200"/><br>
+							</div>
+							<div class="col-md-8">
+							<p><b>Imie:</b>{{prof.user.name}}</p>
+							<p><b>Nazwisko:</b>{{prof.user.lastname}}</p>
+							<p><b>e-mail:</b>{{prof.user.email}}</p>
+							<p><b>Miejscowosc:</b>{{prof.user.pofres}}</p>
+							</div>
+							</div>
+						</div>
+					</div>
+					<div id="szare" class="panel" ng-show="panel.isSelected(2)">
+						<div ng-controller="PriestController as kaplan">
+							<h2>Wybor spowiednika</h2><br><br>
+							<div ng-repeat="ksi in kaplan.priest">
+								
+								<div ng-show="ksi.active" >
+									<div class="row">
+									<div class="col-md-2">
+									<img ng-src="{{ksi.image}}" width="150" height="200"/><br>
+									</div>
+									<div class="col-md-3">
+									<p><b>Imie:</b>{{ksi.name}}</p>
+									<p><b>Nazwisko:</b>{{ksi.lastname}}</p>
+									<p><b>Parafia: </b>{{ksi.city}}</p>
+									<p><b>Wiek: </b>{{ksi.age}}</p>
+									</div>
+									<div class="col-md-5" >
+									<button type="button" class="btn btn-primary" 
+										ng-click="press=true">Opinie</button><br><br>
+										
+									<blockquote ng-show="press" ng-repeat="rate in ksi.rates">
+										
+										<b>Score: {{rate.score}}</b>
+												{{rate.body}}
+										<cite>dodane przez: {{rate.author}}</cite>
+									</blockquote>
+									</div>
+									</div>
+									<br>
+									<center>
+									<button ng-show="ksi.active" id="press" type="button" class="btn btn-primary" 
+										ng-click="klik=true">Rozpocznij spowiedz</button><br><br>
+									<div ng-show="klik" name="comForm">															
+										<form><font color="black">											
+											<blockquote>									
+												<textarea disabled rows="10" cols="100">Spowiedz rozpoczeta</textarea>
+											</blockquote>																
+											<textarea rows="2" cols="100"></textarea>
+											<br>
+											<input type="submit" value="Wyslij"/><br><br>
+											</font>
+										</form>
+										
+									</div>
+									</center>
+								</div>
+							</div>
+							
+						</div>
+					</div>
+					<div id="szare" class="panel" ng-show="panel.isSelected(3)">
+						<div ng-controller="PriestController as kaplan">
+							<h2>Ocena</h2>
+							<div ng-repeat="ksi in kaplan.priest">
+								<div class="row">
+								<div class="col-md-2">
+									<img ng-src="{{ksi.image}}" width="150" height="200"/><br>
+								</div>
+								<div class="col-md-2">
+									<p><b>Imie:</b>{{ksi.name}}</p>
+									<p><b>Nazwisko:</b>{{ksi.lastname}}</p>
+									<p><b>Parafia: </b>{{ksi.city}}</p>
+									<p><b>Wiek: </b>{{ksi.age}}</p>
+								</div>	
+								<div class="col-md-4">
+								<center>
+									<form name="rateForm" ng-controller="RateController as rateCtrl"
+											ng-submit="rateCtrl.addRate(ksi)"><font color="black">
+									
+									<blockquote>
+									
+										<b>Score: {{rateCtrl.rate.score}}</b>
+												{{rateCtrl.rate.body}}
+										<cite>dodane przez: {{rateCtrl.rate.author}}</cite>
+									</blockquote>
+									
+										<p>Ilosc punktow</p>
+										<select ng-model="rateCtrl.rate.score">
+											<option value="1"> 1 </option>
+											<option value="2"> 2 </option>
+											<option value="3"> 3 </option>
+											<option value="4"> 4 </option>
+											<option value="5"> 5 </option>
+										</select><br>	
+										<p>Opinia</p>
+										<textarea ng-model="rateCtrl.rate.body"></textarea><br>
+										<label>dodane przez: </label><br>
+										<input ng-model="rateCtrl.rate.author" type="email"/><br><br>
+										<center><input type="submit" value="Submit"/><center>
+									</font></form>
+									</center>
+									</div>
+									<div class="col-md-3">
+										<h3>Opinie: </h3>
+										<blockquote ng-repeat="rate in ksi.rates"><font color="white">
+										
+											<b>Score: {{rate.score}}</b>
+												{{rate.body}}
+											<cite>dodane przez: {{rate.author}}</cite>
+										</font></blockquote>	
+									</div>
+									
+								
+								</div><br>
+							</div>
+						</div>
+					</div>
+			</section>		
+		</div>
+	</div>
+	</div>
+	</div>
+	</font>
+  </body>
+</html>
