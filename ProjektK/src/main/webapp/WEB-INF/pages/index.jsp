@@ -35,36 +35,6 @@
       </td>
         </div>
       </div>
-
-      <c:if test="${!empty users}">
-        <h3>Zarejestrowani wierni</h3>
-        <table class="table table-bordered table-striped">
-          <thead>
-          <tr>
-            <th>Nazwisko</th>
-            <th>Imie</th>
-            <th>Email</th>
-            <th>Wiek</th>
-            <th>Parafia</th>
-            <th>&nbsp;</th>
-          </tr>
-          </thead>
-          <tbody>
-          <c:forEach items="${users}" var="user">
-            <tr>
-              <td>${user.nazwisko}</td>
-              <td>${user.imie}</td>
-              <td>${user.email}</td>
-              <td>${user.wiek}</td>
-              <td>${user.parafia}</td>
-              <td>
-                <form action="delete/${user.id}" method="post"><input type="submit" class="btn btn-danger btn-mini" value="Usun"/></form>
-              </td>
-            </tr>
-          </c:forEach>
-          </tbody>
-        </table>
-      </c:if>
     </div>
   </div>
 </div>
