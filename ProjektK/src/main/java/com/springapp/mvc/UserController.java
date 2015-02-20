@@ -18,22 +18,52 @@ public class UserController {
     public String listUsers(ModelMap model) {
         model.addAttribute("user", new User());
         model.addAttribute("users", userRepository.findAll());
-        return "users";
+        return "index"; //ZMIENIAC W RAZIE KONIECZNOSCI PRZEJSCIA NA INNA STRONE POKI BRAKUJE PRZEJSC
     }
 
-    @RequestMapping(value = "/add", method = RequestMethod.POST)
-    public String addUser(@ModelAttribute("user") User user, BindingResult result) {
+    @RequestMapping(value = "/addrej", method = RequestMethod.POST)
+    public String addUserRej(@ModelAttribute("user") User user, BindingResult result) {
 
         userRepository.save(user);
 
-        return "redirect:/";
+        return "redirect:/rejestracja";
     }
 
-    @RequestMapping("/delete/{userId}")
-    public String deleteUser(@PathVariable("userId") Long userId) {
+    @RequestMapping("/deleterej/{userId}")
+    public String deleteUserRej(@PathVariable("userId") Long userId) {
 
         userRepository.delete(userRepository.findOne(userId));
 
-        return "redirect:/";
+        return "redirect:/rejestracja";
+    }
+
+    @RequestMapping(value = "/addlog", method = RequestMethod.POST)
+    public String addUserLog(@ModelAttribute("user") User user, BindingResult result) {
+
+        userRepository.save(user);
+
+        return "redirect:/logowanie";
+    }
+
+    @RequestMapping("/deletelog/{userId}")
+    public String deleteUserLog(@PathVariable("userId") Long userId) {
+
+        userRepository.delete(userRepository.findOne(userId));
+
+        return "redirect:/logowanie";
+    }
+
+    @RequestMapping(value = "/rejestracja", method = RequestMethod.GET)
+    public String Rejestracja(ModelMap model) {
+        model.addAttribute("user", new User());
+        model.addAttribute("users", userRepository.findAll());
+        return "rejestracja";
+    }
+
+    @RequestMapping(value = "/logowanie", method = RequestMethod.GET)
+    public String Logowanie(ModelMap model) {
+        model.addAttribute("user", new User());
+        model.addAttribute("users", userRepository.findAll());
+        return "logowanie";
     }
 }
