@@ -15,15 +15,15 @@
   <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link href="http://twitter.github.io/bootstrap/assets/css/bootstrap.css" rel="stylesheet">
-  <link href="http://twitter.github.io/bootstrap/assets/css/bootstrap-responsive.css" rel="stylesheet">
+  <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
-<body>
+<body style="background-image: url('http://www.urss.pl/attachments/795bb_spowiedz.jpg'); background-size: cover; background-repeat: no-repeat">
 
-<div class="container">
+
+<div class="container" align="center" >
   <div class="row">
-    <div class="span8 offset2">
+    <div class="span8 offset2"  style="background-color: mintcream; background-size: contain">
       <h1>Logowanie</h1>
       <form:form method="post" action="addlog" commandName="user" class="form-horizontal">
       <div class="control-group">
@@ -37,10 +37,10 @@
         <div class="controls">
           <form:input type="password" path="haslo"/>
         </div>
-      </div>
+      </div><br>
       <div class="control-group">
         <div class="controls">
-          <input type="submit" value="Zaloguj" class="btn"/>
+          <input type="submit" class="btn btn-default" value="Zaloguj" class="btn"/>
           </form:form>
         </div>
       </div>
@@ -65,12 +65,19 @@
           </tbody>
         </table>
       </c:if>
-      <td>
-        <form action="rejestracja" method="get"><input type="submit" class="btn btn-danger btn-mini" value="Rejestracja"/></form>
-      </td>
-      <td>
-        <form action="/" method="get"><input type="submit" class="btn btn-danger btn-mini" value="Strona glowna"/></form>
-      </td>
+      <table>
+        <tr>
+          <td>
+            <form action="rejestracja" method="get"><input type="submit" class="btn btn-primary" value="Rejestracja"/></form>
+          </td>
+          <td></td>
+          <td>
+            <form action="/" method="get"><input type="submit" class="btn btn-primary" value="Strona glowna"/></form>
+          </td>
+        </tr>
+
+      </table><br>
+
     </div>
   </div>
 </div>
