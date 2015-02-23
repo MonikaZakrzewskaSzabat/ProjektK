@@ -88,4 +88,22 @@ public class UserDAOImpl implements UserDAO {
 
         return listUsers;
     }
+
+    @Override
+    public String getPassword(User user) {
+        List<String> password=null;
+        if(!user.getEmail().isEmpty()) {
+            String sql = "SELECT haslo FROM user WHERE email= '" + user.getEmail() + "'";
+            password = jdbcTemplate.query(sql, new RowMapper<String>() {
+                @Override
+                public String mapRow(ResultSet rs, int i) throws SQLException {
+                    return rs.getString(1);
+                }
+            });
+        }
+        else{
+            return "puste";
+        }
+        return password.get(0);
+    }
 }

@@ -86,10 +86,19 @@ public class UserController {
 
     @RequestMapping(value = "/addlog", method = RequestMethod.POST)
     public ModelAndView UserLog(@ModelAttribute User user) {
+        String passwordFromDB;
 
-        ModelAndView model = new ModelAndView("main_page");
-        model.addObject("user", user);
-        return model;
+        passwordFromDB= userDAO.getPassword(user);
+        if(passwordFromDB.equals(user.getHaslo())) {
+            ModelAndView model = new ModelAndView("main_page");
+            model.addObject("user", user);
+            return model;
+        }
+        else{
+            ModelAndView model = new ModelAndView("logowanie");
+            return model;
+
+        }
     }
 
 

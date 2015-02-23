@@ -12,5 +12,9 @@
     	<div align="center">
 Witam
     	</div>
+
+        <td>
+            <form action="/" method="get"><input type="submit" class="btn btn-danger btn-mini" value="Strona glowna"/></form>
+        </td>
     </body>
 </html>

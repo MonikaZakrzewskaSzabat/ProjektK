@@ -39,7 +39,7 @@
       <file leaf-file-name="logowanie.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/logowanie.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-24.192308" vertical-offset="357" max-vertical-offset="1445">
+            <state vertical-scroll-proportion="-8.5" vertical-offset="765" max-vertical-offset="1445">
               <caret line="58" column="39" selection-start-line="58" selection-start-column="39" selection-end-line="58" selection-end-column="39" />
               <folding />
             </state>
@@ -49,8 +49,8 @@
       <file leaf-file-name="rejestracja.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/rejestracja.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-40.884617" vertical-offset="297" max-vertical-offset="1853">
-              <caret line="80" column="49" selection-start-line="80" selection-start-column="49" selection-end-line="80" selection-end-column="49" />
+            <state vertical-scroll-proportion="-13.423077" vertical-offset="1266" max-vertical-offset="1853">
+              <caret line="95" column="0" selection-start-line="95" selection-start-column="0" selection-end-line="97" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -59,8 +59,8 @@
       <file leaf-file-name="UserController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/springapp/mvc/UserController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1261" max-vertical-offset="1751">
-              <caret line="88" column="0" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="1301" max-vertical-offset="1904">
+              <caret line="90" column="50" selection-start-line="90" selection-start-column="50" selection-end-line="90" selection-end-column="50" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -71,15 +71,28 @@
       <file leaf-file-name="UserDAOImpl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/springapp/mvc/UserDAOImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="417" max-vertical-offset="1479">
-              <caret line="40" column="38" selection-start-line="40" selection-start-column="38" selection-end-line="40" selection-end-column="38" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="1046" max-vertical-offset="1785">
+              <caret line="104" column="25" selection-start-line="104" selection-start-column="25" selection-end-line="104" selection-end-column="25" />
               <folding>
-                <marker date="1424696825481" expanded="true" signature="727:809" placeholder="UPDATE user ..." />
-                <marker date="1424696825481" expanded="true" signature="1040:1153" placeholder="INSERT INTO ..." />
-                <marker date="1424696825481" expanded="true" signature="1406:1433" placeholder="DELETE FROM ..." />
-                <marker date="1424696825481" expanded="true" signature="1548:1577" placeholder="SELECT * FRO..users..." />
-                <marker date="1424696825481" expanded="true" signature="2294:2312" placeholder="SELECT * FRO..users..." />
+                <marker date="1424702745420" expanded="true" signature="727:809" placeholder="UPDATE user ..." />
+                <marker date="1424702745420" expanded="true" signature="1040:1153" placeholder="INSERT INTO ..." />
+                <marker date="1424702745420" expanded="true" signature="1406:1433" placeholder="DELETE FROM ..." />
+                <marker date="1424702745420" expanded="true" signature="1548:1577" placeholder="SELECT * FRO..users..." />
+                <marker date="1424702745420" expanded="true" signature="2294:2312" placeholder="SELECT * FRO..users..." />
+                <marker date="1424702745420" expanded="true" signature="3114:3149" placeholder="SELECT 'hasl..user..." />
+                <marker date="1424702745420" expanded="true" signature="3114:3151" placeholder="SELECT haslo..user..." />
+                <marker date="1424702745420" expanded="true" signature="3114:3175" placeholder="SELECT haslo..user..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="home.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/home.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-2.5" vertical-offset="326" max-vertical-offset="816">
+              <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -88,27 +101,27 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/springapp/mvc/MvcConfiguration.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="71" max-vertical-offset="714">
-              <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+              <caret line="41" column="32" selection-start-line="41" selection-start-column="32" selection-end-line="41" selection-end-column="40" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserDAO.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="UserDAO.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/springapp/mvc/UserDAO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.55510205" vertical-offset="0" max-vertical-offset="490">
-              <caret line="17" column="4" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="4" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="289" max-vertical-offset="425">
+              <caret line="18" column="42" selection-start-line="18" selection-start-column="42" selection-end-line="18" selection-end-column="42" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main_page.jsp" pinned="false" current-in-tab="false">
+      <file leaf-file-name="main_page.jsp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/main_page.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.8461537" vertical-offset="0" max-vertical-offset="374">
-              <caret line="12" column="5" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
+            <state vertical-scroll-proportion="0.6228448" vertical-offset="0" max-vertical-offset="464">
+              <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -141,11 +154,11 @@
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/UserForm.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/springapp/mvc/User.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/rejestracja.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/springapp/mvc/UserDAOImpl.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/logowanie.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/main_page.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/springapp/mvc/UserController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/springapp/mvc/UserDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/springapp/mvc/UserController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/springapp/mvc/UserDAOImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/main_page.jsp" />
       </list>
     </option>
   </component>
@@ -197,6 +210,8 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -313,8 +328,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -336,6 +349,8 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="FullScreen" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="OverrideImplement.combined" value="true" />
+    <property name="OverrideImplement.overriding.sorted" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -701,12 +716,15 @@
       <workItem from="1424686324858" duration="1899000" />
       <workItem from="1424688247390" duration="1410000" />
       <workItem from="1424696417921" duration="205000" />
-      <workItem from="1424696637607" duration="1009000" />
+      <workItem from="1424696637607" duration="1792000" />
+      <workItem from="1424698455199" duration="2133000" />
+      <workItem from="1424700614366" duration="2175000" />
+      <workItem from="1424702808787" duration="145000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28677000" />
+    <option name="totallyTimeSpent" value="33913000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1456" height="876" extended-state="6" />
@@ -795,11 +813,14 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="54" max-vertical-offset="1462">
           <caret line="25" column="21" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
           <folding>
-            <marker date="1424696825481" expanded="true" signature="727:809" placeholder="UPDATE user ..." />
-            <marker date="1424696825481" expanded="true" signature="1040:1153" placeholder="INSERT INTO ..." />
-            <marker date="1424696825481" expanded="true" signature="1406:1433" placeholder="DELETE FROM ..." />
-            <marker date="1424696825481" expanded="true" signature="1548:1577" placeholder="SELECT * FRO..users..." />
-            <marker date="1424696825481" expanded="true" signature="2294:2312" placeholder="SELECT * FRO..users..." />
+            <marker date="1424702745420" expanded="true" signature="727:809" placeholder="UPDATE user ..." />
+            <marker date="1424702745420" expanded="true" signature="1040:1153" placeholder="INSERT INTO ..." />
+            <marker date="1424702745420" expanded="true" signature="1406:1433" placeholder="DELETE FROM ..." />
+            <marker date="1424702745420" expanded="true" signature="1548:1577" placeholder="SELECT * FRO..users..." />
+            <marker date="1424702745420" expanded="true" signature="2294:2312" placeholder="SELECT * FRO..users..." />
+            <marker date="1424702745420" expanded="true" signature="3114:3149" placeholder="SELECT 'hasl..user..." />
+            <marker date="1424702745420" expanded="true" signature="3114:3151" placeholder="SELECT haslo..user..." />
+            <marker date="1424702745420" expanded="true" signature="3114:3175" placeholder="SELECT haslo..user..." />
           </folding>
         </state>
       </provider>
@@ -867,11 +888,14 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="54" max-vertical-offset="1462">
           <caret line="25" column="21" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
           <folding>
-            <marker date="1424696825481" expanded="true" signature="727:809" placeholder="UPDATE user ..." />
-            <marker date="1424696825481" expanded="true" signature="1040:1153" placeholder="INSERT INTO ..." />
-            <marker date="1424696825481" expanded="true" signature="1406:1433" placeholder="DELETE FROM ..." />
-            <marker date="1424696825481" expanded="true" signature="1548:1577" placeholder="SELECT * FRO..users..." />
-            <marker date="1424696825481" expanded="true" signature="2294:2312" placeholder="SELECT * FRO..users..." />
+            <marker date="1424702745420" expanded="true" signature="727:809" placeholder="UPDATE user ..." />
+            <marker date="1424702745420" expanded="true" signature="1040:1153" placeholder="INSERT INTO ..." />
+            <marker date="1424702745420" expanded="true" signature="1406:1433" placeholder="DELETE FROM ..." />
+            <marker date="1424702745420" expanded="true" signature="1548:1577" placeholder="SELECT * FRO..users..." />
+            <marker date="1424702745420" expanded="true" signature="2294:2312" placeholder="SELECT * FRO..users..." />
+            <marker date="1424702745420" expanded="true" signature="3114:3149" placeholder="SELECT 'hasl..user..." />
+            <marker date="1424702745420" expanded="true" signature="3114:3151" placeholder="SELECT haslo..user..." />
+            <marker date="1424702745420" expanded="true" signature="3114:3175" placeholder="SELECT haslo..user..." />
           </folding>
         </state>
       </provider>
@@ -947,11 +971,14 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1394">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1424696825481" expanded="true" signature="727:809" placeholder="UPDATE user ..." />
-            <marker date="1424696825481" expanded="true" signature="1040:1153" placeholder="INSERT INTO ..." />
-            <marker date="1424696825481" expanded="true" signature="1406:1433" placeholder="DELETE FROM ..." />
-            <marker date="1424696825481" expanded="true" signature="1548:1577" placeholder="SELECT * FRO..users..." />
-            <marker date="1424696825481" expanded="true" signature="2294:2312" placeholder="SELECT * FRO..users..." />
+            <marker date="1424702745420" expanded="true" signature="727:809" placeholder="UPDATE user ..." />
+            <marker date="1424702745420" expanded="true" signature="1040:1153" placeholder="INSERT INTO ..." />
+            <marker date="1424702745420" expanded="true" signature="1406:1433" placeholder="DELETE FROM ..." />
+            <marker date="1424702745420" expanded="true" signature="1548:1577" placeholder="SELECT * FRO..users..." />
+            <marker date="1424702745420" expanded="true" signature="2294:2312" placeholder="SELECT * FRO..users..." />
+            <marker date="1424702745420" expanded="true" signature="3114:3149" placeholder="SELECT 'hasl..user..." />
+            <marker date="1424702745420" expanded="true" signature="3114:3151" placeholder="SELECT haslo..user..." />
+            <marker date="1424702745420" expanded="true" signature="3114:3175" placeholder="SELECT haslo..user..." />
           </folding>
         </state>
       </provider>
@@ -1119,21 +1146,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/home.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="352" max-vertical-offset="816">
-          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/springapp/mvc/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="836" max-vertical-offset="1632">
-          <caret line="16" column="25" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/UserForm.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="80" max-vertical-offset="697">
@@ -1149,66 +1161,85 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/springapp/mvc/MvcConfiguration.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/springapp/mvc/User.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="122" max-vertical-offset="714">
-          <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="836" max-vertical-offset="1632">
+          <caret line="16" column="25" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/logowanie.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/springapp/mvc/UserDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-24.192308" vertical-offset="357" max-vertical-offset="1445">
-          <caret line="58" column="39" selection-start-line="58" selection-start-column="39" selection-end-line="58" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/main_page.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.8461537" vertical-offset="0" max-vertical-offset="374">
-          <caret line="12" column="5" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/rejestracja.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-40.884617" vertical-offset="297" max-vertical-offset="1853">
-          <caret line="80" column="49" selection-start-line="80" selection-start-column="49" selection-end-line="80" selection-end-column="49" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="425">
+          <caret line="18" column="42" selection-start-line="18" selection-start-column="42" selection-end-line="18" selection-end-column="42" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/springapp/mvc/UserController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1261" max-vertical-offset="1751">
-          <caret line="88" column="0" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="1301" max-vertical-offset="1904">
+          <caret line="90" column="50" selection-start-line="90" selection-start-column="50" selection-end-line="90" selection-end-column="50" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/springapp/mvc/MvcConfiguration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="71" max-vertical-offset="714">
+          <caret line="41" column="32" selection-start-line="41" selection-start-column="32" selection-end-line="41" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/springapp/mvc/UserDAOImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="417" max-vertical-offset="1479">
-          <caret line="40" column="38" selection-start-line="40" selection-start-column="38" selection-end-line="40" selection-end-column="38" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="1046" max-vertical-offset="1785">
+          <caret line="104" column="25" selection-start-line="104" selection-start-column="25" selection-end-line="104" selection-end-column="25" />
           <folding>
-            <marker date="1424696825481" expanded="true" signature="727:809" placeholder="UPDATE user ..." />
-            <marker date="1424696825481" expanded="true" signature="1040:1153" placeholder="INSERT INTO ..." />
-            <marker date="1424696825481" expanded="true" signature="1406:1433" placeholder="DELETE FROM ..." />
-            <marker date="1424696825481" expanded="true" signature="1548:1577" placeholder="SELECT * FRO..users..." />
-            <marker date="1424696825481" expanded="true" signature="2294:2312" placeholder="SELECT * FRO..users..." />
+            <marker date="1424702745420" expanded="true" signature="727:809" placeholder="UPDATE user ..." />
+            <marker date="1424702745420" expanded="true" signature="1040:1153" placeholder="INSERT INTO ..." />
+            <marker date="1424702745420" expanded="true" signature="1406:1433" placeholder="DELETE FROM ..." />
+            <marker date="1424702745420" expanded="true" signature="1548:1577" placeholder="SELECT * FRO..users..." />
+            <marker date="1424702745420" expanded="true" signature="2294:2312" placeholder="SELECT * FRO..users..." />
+            <marker date="1424702745420" expanded="true" signature="3114:3149" placeholder="SELECT 'hasl..user..." />
+            <marker date="1424702745420" expanded="true" signature="3114:3151" placeholder="SELECT haslo..user..." />
+            <marker date="1424702745420" expanded="true" signature="3114:3175" placeholder="SELECT haslo..user..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/springapp/mvc/UserDAO.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/home.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.55510205" vertical-offset="0" max-vertical-offset="490">
-          <caret line="17" column="4" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="4" />
+        <state vertical-scroll-proportion="-2.5" vertical-offset="326" max-vertical-offset="816">
+          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/logowanie.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.5" vertical-offset="765" max-vertical-offset="1445">
+          <caret line="58" column="39" selection-start-line="58" selection-start-column="39" selection-end-line="58" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/rejestracja.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.423077" vertical-offset="1266" max-vertical-offset="1853">
+          <caret line="95" column="0" selection-start-line="95" selection-start-column="0" selection-end-line="97" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/main_page.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6228448" vertical-offset="0" max-vertical-offset="464">
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
           <folding />
         </state>
       </provider>
