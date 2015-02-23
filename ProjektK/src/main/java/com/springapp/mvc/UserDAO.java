@@ -15,4 +15,5 @@ public interface UserDAO {
     public User get(Long id);
 
     public List<User> list();
+    
 }

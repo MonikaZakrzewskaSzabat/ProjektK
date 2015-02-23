@@ -8,21 +8,33 @@ public class User {
     private Long id;
 
     @Basic
-    private String firstName;
+    private String imie;
 
     @Basic
-    private String lastName;
+    private String nazwisko;
 
     @Basic
     private String email;
 
+    @Basic
+    private String parafia;
+
+    @Basic
+    private int wiek;
+
+    @Basic
+    private String haslo;
+
     public User() {
     }
 
-    public User(String firstName, String lastName, String email) {
-        this.firstName = firstName;
-        this.lastName = lastName;
+    public User(String imie, String nazwisko, String email, String parafia, int wiek, String haslo) {
+        this.imie = imie;
+        this.nazwisko = nazwisko;
         this.email = email;
+        this.parafia= parafia;
+        this.wiek= wiek;
+        this.haslo= haslo;
     }
     public Long getId() {
         return id;
@@ -32,20 +44,28 @@ public class User {
         this.id = id;
     }
 
-    public String getFirstName() {
-        return firstName;
+    public String getImie() {
+        return imie;
     }
 
-    public void setFirstName(String name) {
-        this.firstName = name;
+    public void setImie(String imie) {
+        this.imie = imie;
     }
 
-    public String getLastName() {
-        return lastName;
+    public String getParafia() {
+        return parafia;
     }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+    public void setParafia(String parafia) {
+        this.parafia = parafia;
+    }
+
+    public String getNazwisko() {
+        return nazwisko;
+    }
+
+    public void setNazwisko(String nazwisko) {
+        this.nazwisko = nazwisko;
     }
 
     public String getEmail() {
@@ -54,5 +74,21 @@ public class User {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public int getWiek() {
+        return wiek;
+    }
+
+    public void setWiek(int wiek) {
+        this.wiek = wiek;
+    }
+
+    public String getHaslo() {
+        return haslo;
+    }
+
+    public void setHaslo(String haslo) {
+        this.haslo = haslo;
     }
 }

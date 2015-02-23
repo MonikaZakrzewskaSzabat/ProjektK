@@ -1,39 +1,43 @@
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-   "http://www.w3.org/TR/html4/loose.dtd">
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%--
+  Created by IntelliJ IDEA.
+  User: Wojtek
+  Date: 2015-02-20
+--%>
+<!doctype html>
+<%@taglib uri="http://www.springframework.org/tags" prefix="spring" %>
+<%@taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
 <html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>User Home</title>
-    </head>
-    <body>
-    	<div align="center">
-	        <h1>User List</h1>
-	        <h3><a href="newUser">New User</a></h3>
-	        <table border="1">
-	        	<th>No</th>
-	        	<th>First Name</th>
-	        	<th>Last Name</th>
-	        	<th>Email</th>
-	        	<th>Action</th>
-	        	
-				<c:forEach var="user" items="${listUsers}" varStatus="status">
-	        	<tr>
-	        		<td>${status.index + 1}</td>
-					<td>${user.firstName}</td>
-					<td>${user.lastName}</td>
-					<td>${user.email}</td>
-					<td>
-						<a href="editUser?id=${user.id}">Edit</a>
-						&nbsp;&nbsp;&nbsp;&nbsp;
-						<a href="deleteUser?id=${user.id}">Delete</a>
-					</td>
-							
-	        	</tr>
-				</c:forEach>	        	
-			</table>
-    	</div>
-    </body>
+<head>
+  <meta charset="utf-8">
+  <title>Projekt - konfesjonal</title>
+
+  <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="http://twitter.github.io/bootstrap/assets/css/bootstrap.css" rel="stylesheet">
+  <link href="http://twitter.github.io/bootstrap/assets/css/bootstrap-responsive.css" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="container">
+  <div class="row">
+    <div class="span8 offset2">
+      <h1>Witamy na stronie wirtualnego konfesjonalu</h1>
+      <h2>U nas wyspowiadasz sie bez strachu</h2>
+      <td>
+        <form action="rejestracja" method="get"><input type="submit" class="btn btn-danger btn-mini" value="Rejestracja"/></form>
+      </td>
+      <td>
+        <form action="logowanie" method="get"><input type="submit" class="btn btn-danger btn-mini" value="Logowanie"/></form>
+      </td>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
 </html>

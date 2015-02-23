@@ -25,25 +25,31 @@ public class UserController {
         return model;
     }
 
-    @RequestMapping(value = "/newUser", method = RequestMethod.GET)
-    public ModelAndView newUser(ModelAndView model) {
-        User user = new User();
-        model.addObject("user", user);
-        model.setViewName("UserForm");
-        return model;
-    }
+//    @RequestMapping(value = "/newUser", method = RequestMethod.GET)
+//    public ModelAndView newUser(ModelAndView model) {
+//        User user = new User();
+//        model.addObject("user", user);
+//        model.setViewName("UserForm");
+//        return model;
+//    }
 
-    @RequestMapping(value = "/saveUser", method = RequestMethod.POST)
-    public ModelAndView saveUser(@ModelAttribute User user) {
+//    @RequestMapping(value = "/saveUser", method = RequestMethod.POST)
+//    public ModelAndView saveUser(@ModelAttribute User user) {
+//        userDAO.saveOrUpdate(user);
+//        return new ModelAndView("redirect:/");
+//    }
+
+    @RequestMapping(value = "/addrej", method = RequestMethod.POST)
+    public ModelAndView addUserRej(@ModelAttribute User user) {
         userDAO.saveOrUpdate(user);
-        return new ModelAndView("redirect:/");
+        return new ModelAndView("redirect:/rejestracja");
     }
 
-    @RequestMapping(value = "/deleteUser", method = RequestMethod.GET)
+    @RequestMapping(value = "/deleteUser", method = RequestMethod.POST)
     public ModelAndView deleteUser(HttpServletRequest request) {
         Long id = Long.parseLong(request.getParameter("id"));
         userDAO.delete(id);
-        return new ModelAndView("redirect:/");
+        return new ModelAndView("redirect:/rejestracja");
     }
 
     @RequestMapping(value = "/editUser", method = RequestMethod.GET)
@@ -55,6 +61,37 @@ public class UserController {
 
         return model;
     }
+
+    @RequestMapping(value = "/rejestracja", method = RequestMethod.GET)
+    public ModelAndView newUser(ModelAndView model) {
+        User user = new User();
+        List<User> listUsers = userDAO.list();
+
+        model.addObject("user", user);
+        model.addObject("listUsers", listUsers);
+        model.setViewName("rejestracja");
+        return model;
+    }
+
+    @RequestMapping(value = "/logowanie", method = RequestMethod.GET)
+    public ModelAndView Logowanie(ModelAndView model) {
+        User user = new User();
+        List<User> listUsers = userDAO.list();
+
+        model.addObject("user", user);
+        model.addObject("listUsers", listUsers);
+        model.setViewName("logowanie");
+        return model;
+    }
+
+    @RequestMapping(value = "/addlog", method = RequestMethod.POST)
+    public ModelAndView UserLog(@ModelAttribute User user) {
+
+        ModelAndView model = new ModelAndView("main_page");
+        model.addObject("user", user);
+        return model;
+    }
+
 
 }
 

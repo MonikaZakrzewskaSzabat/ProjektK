@@ -24,21 +24,21 @@ public class UserDAOImpl implements UserDAO {
     public void saveOrUpdate(User user) {
         if (user.getId() != null) {
             // update
-            String sql = "UPDATE users SET firstname=?, lastname=?, email=? WHERE id=?";
-            jdbcTemplate.update(sql, user.getFirstName(), user.getLastName(),
-                    user.getEmail(), user.getId());
+            String sql = "UPDATE user SET imie=?, nazwisko=?, email=?, parafia=?, wiek=?, haslo=? WHERE id=?";
+            jdbcTemplate.update(sql, user.getImie(), user.getNazwisko(),
+                    user.getEmail(), user.getParafia(), user.getWiek(), user.getHaslo());
         } else {
             // insert
-            String sql = "INSERT INTO users (firstname, lastname, email)"
-                    + " VALUES (?, ?, ?)";
-            jdbcTemplate.update(sql, user.getFirstName(), user.getLastName(),
-                    user.getEmail());
+            String sql = "INSERT INTO user (imie, nazwisko, email, parafia, wiek, haslo)"
+                    + " VALUES (?, ?, ?, ?, ?, ?)";
+            jdbcTemplate.update(sql, user.getImie(), user.getNazwisko(),
+                    user.getEmail(), user.getParafia(), user.getWiek(), user.getHaslo());
         }
     }
 
     @Override
     public void delete(Long id) {
-        String sql = "DELETE FROM users WHERE id=?";
+        String sql = "DELETE FROM user WHERE id=?";
         jdbcTemplate.update(sql, id);
     }
 
@@ -53,8 +53,8 @@ public class UserDAOImpl implements UserDAO {
                 if (rs.next()) {
                     User user = new User();
                     user.setId(rs.getLong("id"));
-                    user.setFirstName(rs.getString("firstname"));
-                    user.setLastName(rs.getString("lastname"));
+                   // user.setFirstName(rs.getString("firstname"));
+                   // user.setLastName(rs.getString("lastname"));
                     user.setEmail(rs.getString("email"));
                     return user;
                 }
@@ -67,7 +67,7 @@ public class UserDAOImpl implements UserDAO {
 
     @Override
     public List<User> list() {
-        String sql = "SELECT * FROM users";
+        String sql = "SELECT * FROM user";
         List<User> listUsers= jdbcTemplate.query(sql, new RowMapper<User>() {
 
             @Override
@@ -75,10 +75,11 @@ public class UserDAOImpl implements UserDAO {
                 User aUser = new User();
 
                 aUser.setId(rs.getLong("id"));
-                aUser.setFirstName(rs.getString("firstname"));
-                aUser.setLastName(rs.getString("lastname"));
+                aUser.setImie(rs.getString("imie"));
+                aUser.setNazwisko(rs.getString("nazwisko"));
                 aUser.setEmail(rs.getString("email"));
-
+                aUser.setParafia(rs.getString("parafia"));
+                aUser.setWiek(rs.getInt("wiek"));
 
                 return aUser;
             }
