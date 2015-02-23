@@ -61,7 +61,7 @@
 
 			<c:if test="${!empty listUsers}">
 				<h3>Zarejestrowani wierni</h3>
-				<table class="table table-bordered table-striped">
+				<table class="table table-bordered table-striped" border="1">
 					<thead>
 					<tr>
 						<th>No</th>

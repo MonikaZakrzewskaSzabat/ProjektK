@@ -10,7 +10,7 @@
     </head>
     <body>
     	<div align="center">
-Witam
+Witam, zostales zalogowany.
     	</div>
 
         <td>
